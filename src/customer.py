@@ -69,6 +69,14 @@ def getCustomer(customerID):
 
 
 
+def updateCustomer(customers):
+    with open("customers.log", 'a', newline='') as customerFile:
+        for customerID in customers:
+            cust = customers[customerID]
+            print(customers[customerID])
+            #writer.writerow([customer1 , cust.firstName , cust.lastName])
+
+
 customers = getCustomers()
 for customerID in customers:
     print(customers[customerID])

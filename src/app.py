@@ -2,10 +2,22 @@ import customer
 
 
 
-print(customer.getCustomer("Third"))
+print(customer.getCustomer("c"))
 customers = customer.getCustomers()
-customers["First"] = "New First Customer"
-print(customer.getCustomers())
-print(customers)
-print(customers["Second"].fullName())
 
+print(customer.getCustomers())
+
+print(customers)
+
+
+test = customer.Customer("t", "test", "Test Customer")
+
+#customers["t"] = test
+
+print(customers)
+print("************************************")
+for customerID in customers:
+    customer1 = customers[customerID]
+    print(customer1)
+
+customer.updateCustomer(customers)
